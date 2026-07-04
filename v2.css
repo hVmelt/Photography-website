@@ -109,12 +109,15 @@ h1 {
   object-position: center;
   border-radius: 3px;
   filter: grayscale(15%);
-  transition: filter 0.6s ease, transform 0.6s ease;
+  transition: filter 0.5s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, filter;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .profile-pic:hover {
   filter: grayscale(0%);
-  transform: scale(1.015);
+  transform: scale(1.015) translateZ(0);
 }
 
 /* ── Gallery ── */
@@ -147,12 +150,17 @@ h1 {
   border-radius: 2px;
   cursor: pointer;
   break-inside: avoid;
-  transition: opacity 0.35s ease, transform 0.4s ease;
+  transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  /* promote to its own GPU layer so the scale composites instead of
+     re-rasterizing the image each frame (fixes hover stutter) */
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .gallery-img:hover {
-  opacity: 0.82;
-  transform: scale(1.008);
+  opacity: 0.85;
+  transform: scale(1.02) translateZ(0);
 }
 
 /* ── Footer ── */
