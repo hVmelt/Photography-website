@@ -6,6 +6,7 @@ const IMAGES_DIR = path.join(__dirname, "images");
 const THUMBS_DIR = path.join(IMAGES_DIR, "thumbs");
 const FULL_DIR = path.join(IMAGES_DIR, "full");
 const THUMB_WIDTH = 800;
+const FULL_WIDTH = 2000; // lightbox max — plenty for any screen, a fraction of the originals
 const FIRST = 1;
 const LAST = 54;
 
@@ -36,8 +37,13 @@ function findOriginal(n) {
       .webp({ quality: 82 })
       .toFile(path.join(THUMBS_DIR, `${base}.webp`));
 
-    // Full: copy the original (preserving its real filename/extension).
-    fs.copyFileSync(src, path.join(FULL_DIR, file));
+    // Full (lightbox): auto-rotated, downsized to FULL_WIDTH, re-encoded JPEG.
+    // Keeps the original filename so the HTML data-full references still match.
+    await sharp(src)
+      .rotate()
+      .resize({ width: FULL_WIDTH, withoutEnlargement: true })
+      .jpeg({ quality: 85, mozjpeg: true })
+      .toFile(path.join(FULL_DIR, file));
 
     console.log(`✓ ${file}`);
     count++;
