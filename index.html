@@ -1,157 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>hVmlet</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarwat — Photography</title>
+    <meta name="description" content="Sarwat is a photographer based in the US. A selection of portrait, event, and documentary work.">
+    <meta name="theme-color" content="#0c130f">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Open Graph / social preview. Set og:url and make og:image absolute once you have a domain. -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sarwat — Photography">
+    <meta property="og:description" content="A selection of portrait, event, and documentary work by Sarwat.">
+    <meta property="og:image" content="og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="v2.css">
   </head>
 
   <body>
 
-    
-    <div class="container">
-        <div class="header">
-            <div class="text">
-                <h1>hVmlet</h1>
-                <p class="subtitle">Photographer.</p>
-            </div>
-            <div class="socials">
-              <a href="https://www.instagram.com/svrwat/" target="_blank">Instagram</a>
-              <a href="https://www.pinterest.com/Sarwattttt/_pins/" target="_blank">Pinterest</a>
-            </div>
-            <div class = "right">
-                <img src="images/moi.webp" alt="Photo of me" class="profile-pic">
-                <p class="intro">Hello! I’m Sarwat. I’m a photographer based in the US.
-                   I always liked taking pictures of my friends, so I bought a camera back in 2023
-                    and kept on going since then. I’m also studying Computer Science at
-                     Southeast Missouri State University. I built this website just to
-                      showcase my work. Hope you like my pictures :)</p>
-            </div>
-        </div>
-    </div>
+    <nav>
+      <span class="nav-name">Sarwat</span>
+      <div class="nav-links">
+        <a href="https://www.instagram.com/svrwat/" target="_blank">Instagram</a>
+        <a href="https://www.pinterest.com/sarwattttt/_created" target="_blank">Pinterest</a>
+      </div>
+    </nav>
 
-    <p>Some photos I’ve taken.</p>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Sarwat</h1>
+        <p class="role">Photographer</p>
+        <p class="bio">
+          Hello! I'm Sarwat. I'm a photographer based in the US.
+          I always liked taking pictures of my friends, so I bought a camera
+          back in 2023 and kept on going since then. I'm also studying
+          Computer Science at Southeast Missouri State University.
+          I built this website just to showcase my work.
+          Hope you like my pictures&nbsp;:)
+        </p>
+      </div>
+      <div class="hero-image">
+        <img src="images/moi.webp" alt="Photo of Sarwat" class="profile-pic">
+      </div>
+    </section>
 
-    <div class="gallery">
-      <img
-        src="images/thumbs/photo1.webp"
-        data-full="images/full/photo1.JPG"
-        class="gallery-img"
-        data-caption="University of Northan Iowa - Cedar Falls, IA"
-        loading="lazy"
-        width="450"
-        height="300"
-      >
-      <img
-        src="images/thumbs/photo2.webp"
-        data-full="images/full/photo2.JPG"
-        class="gallery-img"
-        loading="lazy"
-        width="200"
-        height="300"
-      >
-      <img
-        src="images/thumbs/photo3.webp"
-        data-full="images/full/photo3.JPG"
-        class="gallery-img"
-        loading="lazy"
-        width="200"
-        height="300"
-      >
-      <img
-        src="images/thumbs/photo5.webp"
-        data-full="images/full/photo5.JPG"
-        class="gallery-img"
-        loading="lazy"
-        width="450"
-        height="300"
-      >
-      <img
-        src="images/thumbs/photo4.webp"
-        data-full="images/full/photo4.JPG"
-        class="gallery-img"
-        loading="lazy"
-        width="200"
-        height="300"
-      >
-      <img
-        src="images/thumbs/photo6.webp"
-        data-full="images/full/photo6.JPG"
-        class="gallery-img"
-        loading="lazy"
-        width="200"
-        height="300"
-      >
-      <img
-        src="images/thumbs/photo7.webp"
-        data-full="images/full/photo7.JPG"
-        class="gallery-img"
-        loading="lazy"
-        width="200"
-        height="300"
-      >
-      <img
-        src="images/thumbs/photo8.webp"
-        data-full="images/full/photo8.JPG"
-        class="gallery-img"
-        loading="lazy"
-        width="200"
-        height="300"
-      >
-      <img
-        src="images/thumbs/photo9.webp"
-        data-full="images/full/photo9.JPG"
-        class="gallery-img"
-        loading="lazy"
-        width="200"
-        height="300"
-      >
-      <img
-        src="images/thumbs/photo10.webp"
-        data-full="images/full/photo10.JPG"
-        class="gallery-img"
-        loading="lazy"
-        width="200"
-        height="300"
-      >
+    <section class="gallery-section">
+      <p class="gallery-label">Selected work</p>
+      <div class="gallery">
+        <img
+          src="images/thumbs/photo1.webp"
+          data-full="images/full/photo1.jpg"
+          class="gallery-img"
+          data-caption="University of Northern Iowa — Cedar Falls, IA"
+          loading="lazy"
+          alt=""
+        >
+        <img
+          src="images/thumbs/photo2.webp"
+          data-full="images/full/photo2.jpg"
+          class="gallery-img"
+          loading="lazy"
+          alt=""
+        >
+        <img
+          src="images/thumbs/photo3.webp"
+          data-full="images/full/photo3.JPG"
+          class="gallery-img"
+          loading="lazy"
+          alt=""
+        >
+        <img
+          src="images/thumbs/photo5.webp"
+          data-full="images/full/photo5.JPG"
+          class="gallery-img"
+          loading="lazy"
+          alt=""
+        >
+        <img
+          src="images/thumbs/photo4.webp"
+          data-full="images/full/photo4.JPG"
+          class="gallery-img"
+          loading="lazy"
+          alt=""
+        >
+        <img
+          src="images/thumbs/photo6.webp"
+          data-full="images/full/photo6.JPG"
+          class="gallery-img"
+          loading="lazy"
+          alt=""
+        >
+        <img
+          src="images/thumbs/photo7.webp"
+          data-full="images/full/photo7.JPG"
+          class="gallery-img"
+          loading="lazy"
+          alt=""
+        >
+        <img
+          src="images/thumbs/photo8.webp"
+          data-full="images/full/photo8.JPG"
+          class="gallery-img"
+          loading="lazy"
+          alt=""
+        >
+        <img
+          src="images/thumbs/photo9.webp"
+          data-full="images/full/photo9.jpg"
+          class="gallery-img"
+          loading="lazy"
+          alt=""
+        >
+        <img
+          src="images/thumbs/photo10.webp"
+          data-full="images/full/photo10.JPG"
+          class="gallery-img"
+          loading="lazy"
+          alt=""
+        >
+        <img src="images/thumbs/photo22.webp" data-full="images/full/photo22.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo23.webp" data-full="images/full/photo23.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo24.webp" data-full="images/full/photo24.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo25.webp" data-full="images/full/photo25.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo26.webp" data-full="images/full/photo26.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo27.webp" data-full="images/full/photo27.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo28.webp" data-full="images/full/photo28.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo29.webp" data-full="images/full/photo29.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo30.webp" data-full="images/full/photo30.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo31.webp" data-full="images/full/photo31.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo32.webp" data-full="images/full/photo32.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo33.webp" data-full="images/full/photo33.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo34.webp" data-full="images/full/photo34.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo35.webp" data-full="images/full/photo35.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo36.webp" data-full="images/full/photo36.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo37.webp" data-full="images/full/photo37.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo38.webp" data-full="images/full/photo38.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo39.webp" data-full="images/full/photo39.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo40.webp" data-full="images/full/photo40.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo41.webp" data-full="images/full/photo41.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo42.webp" data-full="images/full/photo42.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo43.webp" data-full="images/full/photo43.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo44.webp" data-full="images/full/photo44.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo45.webp" data-full="images/full/photo45.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo46.webp" data-full="images/full/photo46.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo47.webp" data-full="images/full/photo47.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo48.webp" data-full="images/full/photo48.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo49.webp" data-full="images/full/photo49.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo50.webp" data-full="images/full/photo50.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo51.webp" data-full="images/full/photo51.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo52.webp" data-full="images/full/photo52.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo53.webp" data-full="images/full/photo53.JPG" class="gallery-img" loading="lazy" alt="">
+        <img src="images/thumbs/photo54.webp" data-full="images/full/photo54.JPG" class="gallery-img" loading="lazy" alt="">
+      </div>
+    </section>
 
-      <!-- <img src="images/photo1.jpg" width="675">
-      <img src="images/photo2.jpg" width="300">
-      <img src="images/photo3.jpg" width="300">
-      <img src="images/photo4.jpg" width="300">
-      <img src="images/photo5.jpg" width="675">
-      <img src="images/photo6.jpg" width="300">
-      <img src="images/photo7.jpg" width="300">
-      <img src="images/photo8.jpg" width="300">
-      <img src="images/photo9.jpg" width="300">
-      <img src="images/photo10.jpg" width="300">
-      <img src="images/photo11.jpg" width="300">
-      <img src="images/photo12.jpg" width="445">
-      <img src="images/photo13.jpg" width="300">
-      <img src="images/photo14.jpg" width="675">
-      <img src="images/photo15.jpg" width="300">
-      <img src="images/photo16.jpg" width="675">
-      <img src="images/photo17.jpg" width="300">
-      <img src="images/photo18.jpg" width="300">
-      <img src="images/photo19.jpg" width="300">
-      <img src="images/photo20.jpg" width="300">
-      <img src="images/photo21.jpg" width="300"> -->
-    </div>
-
-    <!-- <div id="lightbox">
-      <img id="lightbox-img">
-    </div> -->
+    <footer>
+      <span>© 2024 Sarwat</span>
+    </footer>
 
     <div id="lightbox">
-      <div class="lightbox-content">
-        <img id="lightbox-img" alt="">
-        <p id="lightbox-caption"></p>
+      <button class="lb-close" aria-label="Close">✕</button>
+      <button class="lb-prev" aria-label="Previous photo">&#8249;</button>
+      <button class="lb-next" aria-label="Next photo">&#8250;</button>
+      <div class="lb-content">
+        <img id="lb-img" alt="">
+        <p id="lb-caption"></p>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="v2.js"></script>
 
   </body>
 </html>
-
-
-
