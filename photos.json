@@ -1,133 +1,39 @@
 [
   {
-    "full": "photo1.jpg",
-    "caption": "University of Northern Iowa — Cedar Falls, IA"
-  },
-  {
-    "full": "photo2.jpg"
-  },
-  {
-    "full": "photo3.JPG"
-  },
-  {
-    "full": "photo5.JPG"
-  },
-  {
     "full": "photo4.JPG"
-  },
-  {
-    "full": "photo6.JPG"
-  },
-  {
-    "full": "photo7.JPG"
-  },
-  {
-    "full": "photo8.JPG"
-  },
-  {
-    "full": "photo9.jpg"
-  },
-  {
-    "full": "photo10.JPG"
-  },
-  {
-    "full": "photo11.JPG"
   },
   {
     "full": "photo12.JPG"
   },
   {
-    "full": "photo13.JPG"
-  },
-  {
     "full": "photo14.JPG"
   },
   {
-    "full": "photo15.JPG"
+    "full": "photo53.JPG"
   },
   {
-    "full": "photo16.JPG"
+    "full": "photo50.JPG"
   },
   {
     "full": "photo17.JPG"
   },
   {
-    "full": "photo18.JPG"
+    "full": "photo5.JPG"
   },
   {
-    "full": "photo19.JPG"
+    "full": "photo10.JPG"
   },
   {
-    "full": "photo20.JPG"
+    "full": "photo6.JPG"
   },
   {
-    "full": "photo21.JPG"
-  },
-  {
-    "full": "photo22.JPG"
-  },
-  {
-    "full": "photo23.JPG"
-  },
-  {
-    "full": "photo24.JPG"
-  },
-  {
-    "full": "photo25.JPG"
-  },
-  {
-    "full": "photo26.JPG"
-  },
-  {
-    "full": "photo27.JPG"
-  },
-  {
-    "full": "photo28.JPG"
+    "full": "photo16.JPG"
   },
   {
     "full": "photo29.JPG"
   },
   {
-    "full": "photo30.JPG"
-  },
-  {
-    "full": "photo31.JPG"
-  },
-  {
-    "full": "photo32.JPG"
-  },
-  {
-    "full": "photo33.JPG"
-  },
-  {
-    "full": "photo34.JPG"
-  },
-  {
-    "full": "photo35.JPG"
-  },
-  {
-    "full": "photo36.JPG"
-  },
-  {
-    "full": "photo37.JPG"
-  },
-  {
-    "full": "photo38.JPG"
-  },
-  {
-    "full": "photo39.JPG"
-  },
-  {
-    "full": "photo40.JPG"
-  },
-  {
-    "full": "photo41.JPG"
-  },
-  {
-    "full": "photo42.JPG"
-  },
-  {
-    "full": "photo43.JPG"
+    "full": "photo25.JPG"
   },
   {
     "full": "photo44.JPG"
@@ -136,7 +42,83 @@
     "full": "photo45.JPG"
   },
   {
+    "full": "photo26.JPG"
+  },
+  {
+    "full": "photo28.JPG"
+  },
+  {
+    "full": "photo27.JPG"
+  },
+  {
+    "full": "photo24.JPG"
+  },
+  {
+    "full": "photo1.jpg",
+    "caption": "University of Northern Iowa — Cedar Falls, IA"
+  },
+  {
+    "full": "photo51.JPG"
+  },
+  {
+    "full": "photo8.JPG"
+  },
+  {
+    "full": "photo34.JPG"
+  },
+  {
+    "full": "photo19.JPG"
+  },
+  {
+    "full": "photo22.JPG"
+  },
+  {
+    "full": "photo2.jpg"
+  },
+  {
+    "full": "photo9.jpg"
+  },
+  {
+    "full": "photo13.JPG"
+  },
+  {
+    "full": "photo52.JPG"
+  },
+  {
+    "full": "photo31.JPG"
+  },
+  {
+    "full": "photo37.JPG"
+  },
+  {
+    "full": "photo41.JPG"
+  },
+  {
+    "full": "photo42.JPG"
+  },
+  {
+    "full": "photo11.JPG"
+  },
+  {
+    "full": "photo43.JPG"
+  },
+  {
+    "full": "photo20.JPG"
+  },
+  {
+    "full": "photo7.JPG"
+  },
+  {
+    "full": "photo15.JPG"
+  },
+  {
     "full": "photo46.JPG"
+  },
+  {
+    "full": "photo18.JPG"
+  },
+  {
+    "full": "photo21.JPG"
   },
   {
     "full": "photo47.JPG"
@@ -145,21 +127,39 @@
     "full": "photo48.JPG"
   },
   {
+    "full": "photo40.JPG"
+  },
+  {
+    "full": "photo39.JPG"
+  },
+  {
+    "full": "photo38.JPG"
+  },
+  {
+    "full": "photo3.JPG"
+  },
+  {
+    "full": "photo23.JPG"
+  },
+  {
+    "full": "photo30.JPG"
+  },
+  {
     "full": "photo49.JPG"
   },
   {
-    "full": "photo50.JPG"
-  },
-  {
-    "full": "photo51.JPG"
-  },
-  {
-    "full": "photo52.JPG"
-  },
-  {
-    "full": "photo53.JPG"
+    "full": "photo33.JPG"
   },
   {
     "full": "photo54.JPG"
+  },
+  {
+    "full": "photo32.JPG"
+  },
+  {
+    "full": "photo35.JPG"
+  },
+  {
+    "full": "photo36.JPG"
   }
 ]
