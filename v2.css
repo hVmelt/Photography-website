@@ -138,18 +138,27 @@ h1 {
   border-top: 1px solid var(--border);
 }
 
+/* Photos are distributed into these columns round-robin by v2.js so they
+   read left-to-right (row by row) while keeping the masonry look. */
 .gallery {
-  columns: 3;
-  column-gap: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.gallery-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .gallery-img {
   display: block;
   width: 100%;
-  margin-bottom: 10px;
   border-radius: 2px;
   cursor: pointer;
-  break-inside: avoid;
   transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   /* promote to its own GPU layer so the scale composites instead of
      re-rasterizing the image each frame (fixes hover stutter) */
@@ -266,8 +275,6 @@ footer {
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
-  .gallery { columns: 2; }
-
   .hero {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -288,8 +295,6 @@ footer {
 }
 
 @media (max-width: 560px) {
-  .gallery { columns: 1; }
-
   h1 { letter-spacing: -1px; }
 
   .nav-links a {

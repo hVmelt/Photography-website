@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   // remove, or caption photos, just edit photos.json — no HTML changes needed.
   // Each entry: { "full": "photo1.jpg", "caption": "optional caption" }
   // The thumbnail is derived automatically as images/thumbs/<name>.webp.
+  let images = [];
   try {
     const res = await fetch("photos.json", { cache: "no-cache" });
     const photos = await res.json();
-    const frag = document.createDocumentFragment();
-    for (const p of photos) {
+    images = photos.map((p) => {
       const id = p.full.replace(/\.[^.]+$/, "");
       const img = document.createElement("img");
       img.className = "gallery-img";
@@ -18,14 +18,46 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (p.caption) img.dataset.caption = p.caption;
       img.loading = "lazy";
       img.alt = p.alt || "";
-      frag.appendChild(img);
-    }
-    gallery.appendChild(frag);
+      return img;
+    });
   } catch (err) {
     console.error("Could not load photos.json:", err);
   }
 
-  const images = Array.from(gallery.querySelectorAll(".gallery-img"));
+  // Lay the photos out in columns, distributed round-robin so they read
+  // left-to-right (row by row) while keeping variable heights (masonry).
+  // The manifest order is preserved as the visual reading order.
+  function columnCount() {
+    const w = window.innerWidth;
+    if (w <= 560) return 1;
+    if (w <= 900) return 2;
+    return 3;
+  }
+
+  let currentCols = 0;
+  function layoutGallery() {
+    const n = columnCount();
+    if (n === currentCols) return; // only rebuild when the column count changes
+    currentCols = n;
+    gallery.textContent = "";
+    const cols = [];
+    for (let c = 0; c < n; c++) {
+      const col = document.createElement("div");
+      col.className = "gallery-col";
+      gallery.appendChild(col);
+      cols.push(col);
+    }
+    // Re-appending existing nodes moves them, preserving click listeners.
+    images.forEach((img, i) => cols[i % n].appendChild(img));
+  }
+
+  layoutGallery();
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(layoutGallery, 150);
+  });
   const lightbox = document.getElementById("lightbox");
   const lbImg = document.getElementById("lb-img");
   const lbCaption = document.getElementById("lb-caption");
