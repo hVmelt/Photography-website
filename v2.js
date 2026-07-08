@@ -1,5 +1,31 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const images = Array.from(document.querySelectorAll(".gallery-img"));
+document.addEventListener("DOMContentLoaded", async () => {
+  const gallery = document.querySelector(".gallery");
+
+  // Build the gallery from the photo manifest (photos.json). To reorder, add,
+  // remove, or caption photos, just edit photos.json — no HTML changes needed.
+  // Each entry: { "full": "photo1.jpg", "caption": "optional caption" }
+  // The thumbnail is derived automatically as images/thumbs/<name>.webp.
+  try {
+    const res = await fetch("photos.json", { cache: "no-cache" });
+    const photos = await res.json();
+    const frag = document.createDocumentFragment();
+    for (const p of photos) {
+      const id = p.full.replace(/\.[^.]+$/, "");
+      const img = document.createElement("img");
+      img.className = "gallery-img";
+      img.src = `images/thumbs/${id}.webp`;
+      img.dataset.full = `images/full/${p.full}`;
+      if (p.caption) img.dataset.caption = p.caption;
+      img.loading = "lazy";
+      img.alt = p.alt || "";
+      frag.appendChild(img);
+    }
+    gallery.appendChild(frag);
+  } catch (err) {
+    console.error("Could not load photos.json:", err);
+  }
+
+  const images = Array.from(gallery.querySelectorAll(".gallery-img"));
   const lightbox = document.getElementById("lightbox");
   const lbImg = document.getElementById("lb-img");
   const lbCaption = document.getElementById("lb-caption");
