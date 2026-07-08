@@ -1,3 +1,13 @@
 node_modules/
 .claude/
 .DS_Store
+
+# Full-res source photos live locally only (generate-thumbs.js reads them).
+# The site ships images/thumbs/ + images/full/ + images/moi.webp.
+/images/*.JPG
+/images/*.jpg
+/images/*.jpeg
+/images/*.JPEG
+/images/*.png
+/images/*.heic
+/images/*.HEIC
