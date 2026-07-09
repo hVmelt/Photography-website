@@ -24,9 +24,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Could not load photos.json:", err);
   }
 
+  // Shuffle so a different set of photos leads the page on each visit
+  // (Fisher-Yates). The lightbox follows this same shuffled order.
+  for (let i = images.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [images[i], images[j]] = [images[j], images[i]];
+  }
+
   // Lay the photos out in columns, distributed round-robin so they read
   // left-to-right (row by row) while keeping variable heights (masonry).
-  // The manifest order is preserved as the visual reading order.
   function columnCount() {
     const w = window.innerWidth;
     if (w <= 560) return 1;
